@@ -7,6 +7,7 @@ echo "4. Añadir a la agenda"
 echo "5. Mostrar los nombres de la agenda"
 echo "6. Mostrar los telefonos de la agenda"
 echo "7. Mostrar las poblaciones de la agenda"
+echo "8. Mostrar primera linea de la agenda"
 echo
 echo "Elige la opcion (1,2,3,4)"
 read opcion
@@ -24,6 +25,7 @@ echo "$nombre:$edad:$pobla">>agenda;;
 5) cat agenda|cut -d":" -f1;;
 6) cat agenda|cut -d":" -f2;;
 7) cat agenda|cut -d":" -f4;;
+8) cat agenda|head -2|tail -1;;
 *) echo "Opcion erronea";;
 esac
 
